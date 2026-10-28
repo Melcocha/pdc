@@ -1,0 +1,2529 @@
+/* ========================================================
+   MODERN, PRO & MINIMALIST EDITORIAL POLITICAL STYLES
+   Inspired by Wix Political Candidate wh-1382 (Kaelen Vance)
+   PDC & Fuerza Solidaria • Departamento de La Unión 2027
+   ======================================================== */
+
+/* --------------------------------------------------
+   0. Global App & Foundation
+   -------------------------------------------------- */
+.pro-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: var(--slate-900);
+}
+
+/* --------------------------------------------------
+   1. Sleek Top Utility Bar
+   -------------------------------------------------- */
+.pro-topbar {
+  background-color: #06381e;
+  color: #ffffff;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.45rem 0;
+  transition: all 0.3s ease;
+}
+
+.pro-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pro-topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pro-topbar-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+}
+
+.pro-topbar-center {
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+}
+
+.pro-topbar-phone {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pro-topbar-phone:hover {
+  color: #86efac;
+}
+
+/* --------------------------------------------------
+   2. Sticky Luxury Navbar
+   -------------------------------------------------- */
+.pro-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.pro-header-scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.pro-nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+
+/* Brand Lockup */
+.pro-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.pro-brand-logo-frame {
+  height: 44px;
+  width: auto;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 122, 61, 0.15);
+  border: 1px solid rgba(0, 122, 61, 0.25);
+  background: #ffffff;
+}
+
+.pro-brand-logo {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.pro-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.pro-brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.pro-brand-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pdc-green);
+  margin-top: 2px;
+}
+
+/* Desktop Menu */
+.pro-desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.pro-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  list-style: none;
+}
+
+.pro-menu-item a {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--slate-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.pro-menu-item a:hover {
+  color: var(--pdc-green);
+}
+
+.pro-menu-item a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--pdc-green);
+  transition: width 0.25s ease;
+  border-radius: 2px;
+}
+
+.pro-menu-item a:hover::after {
+  width: 100%;
+}
+
+.pro-menu-item a.pro-menu-highlight {
+  color: var(--pdc-green);
+}
+
+/* Action Group */
+.pro-nav-action {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.pro-ballot-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.44rem 0.95rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+  flex-shrink: 0;
+}
+
+.pro-ballot-pill:hover {
+  background-color: var(--pdc-green);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 122, 61, 0.25);
+  color: #ffffff;
+}
+
+.pro-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+  animation: proPulse 2s infinite;
+}
+
+@keyframes proPulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.pro-mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  background: var(--slate-100);
+  color: var(--slate-800);
+  border: 1px solid var(--border-light);
+}
+
+/* Mobile Drawer */
+.pro-mobile-drawer {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-medium);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 0 2rem;
+  animation: slideDown 0.25s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pro-mobile-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pro-mobile-drawer-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+  margin-bottom: 0.5rem;
+}
+
+.pro-mobile-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--slate-800);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-light);
+  text-decoration: none;
+}
+
+.pro-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+/* --------------------------------------------------
+   3. OpenCity-Style Hero Banner with Background Slideshow
+   -------------------------------------------------- */
+.opencity-hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  background-color: #042414;
+}
+
+.opencity-slides-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.opencity-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1.2s ease-in-out, transform 7s ease-out;
+}
+
+.opencity-bg-slide.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.opencity-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 38, 20, 0.94) 0%,
+    rgba(3, 38, 20, 0.88) 42%,
+    rgba(5, 24, 14, 0.6) 68%,
+    rgba(5, 24, 14, 0.78) 100%
+  );
+  z-index: 2;
+}
+
+.opencity-hero-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  padding-top: 3.5rem;
+  padding-bottom: 0;
+}
+
+.opencity-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: end;
+}
+
+/* Left Vibrant Green Block (OpenCity Signature) */
+.opencity-green-block {
+  background: #007a3d;
+  background: linear-gradient(145deg, #008744 0%, #006633 100%);
+  border-radius: 16px;
+  padding: 3.6rem 3.2rem;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.opencity-dynamic-content {
+  animation: heroTextFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroTextFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.opencity-hero-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.14;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem;
+}
+
+.opencity-hero-sub {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.94);
+  margin: 0 0 1.8rem;
+  max-width: 520px;
+}
+
+/* Slide Indicator Dots inside the Green Card */
+.opencity-slide-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.opencity-dot-indicator {
+  width: 24px;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.28);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.opencity-dot-indicator.active {
+  background: #ffffff;
+  width: 44px;
+}
+
+.opencity-dot-indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Right Candidate Column (Pegged to bottom edge) */
+.opencity-candidate-col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  margin-top: auto;
+  align-self: flex-end;
+  z-index: 5;
+}
+
+.opencity-cutout-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.opencity-candidate-cutout {
+  display: block;
+  max-height: 560px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  margin-bottom: 0;
+  vertical-align: bottom;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
+  transition: transform 0.4s ease;
+}
+
+.opencity-cutout-wrapper:hover .opencity-candidate-cutout {
+  transform: scale(1.015);
+}
+
+.opencity-cutout-tag {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  background: rgba(3, 24, 14, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.65rem 1.15rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.opencity-cutout-tag-casilla {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #86efac;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.opencity-cutout-tag-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.opencity-cutout-tag-role {
+  display: block;
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin-top: 0.15rem;
+}
+
+/* Bottom Right Slider Controls */
+.opencity-slider-controls {
+  position: absolute;
+  bottom: 2rem;
+  right: 2.5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(4, 28, 16, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.opencity-counter {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #86efac;
+  letter-spacing: 0.1em;
+  margin-right: 0.4rem;
+}
+
+.opencity-nav-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.opencity-nav-btn:hover {
+  background: var(--pdc-green);
+  border-color: var(--pdc-green);
+}
+
+.opencity-bottom-curve {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.opencity-bottom-curve svg {
+  width: 100%;
+  height: 30px;
+  display: block;
+}
+
+/* Clean Stats Ribbon (Directly below Hero Banner) */
+.opencity-stats-ribbon {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.8rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.opencity-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.opencity-stat-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 8px;
+  background: #fafbfc;
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+.opencity-stat-box:hover {
+  border-color: rgba(0, 122, 61, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+.opencity-stat-num {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--pdc-green);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.opencity-stat-box strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--slate-900);
+}
+
+.opencity-stat-box p {
+  margin: 0;
+  font-size: 0.74rem;
+  color: var(--slate-500);
+}
+
+/* --------------------------------------------------
+   4. Candidates Showcase Section
+   -------------------------------------------------- */
+.pro-candidates-section {
+  background-color: #fafbfc;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* --------------------------------------------------
+   4. Candidates Showcase Section (100% Full-Width)
+   -------------------------------------------------- */
+.pro-candidates-section {
+  background-color: #fafbfc;
+  border-bottom: 1px solid var(--border-light);
+  padding: 5rem 0;
+}
+
+.pro-candidates-fullwidth {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 clamp(1.5rem, 4vw, 5rem);
+}
+
+.pro-candidates-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.pro-candidates-duo-grid {
+  display: grid;
+  grid-template-columns: 1.28fr 0.72fr;
+  gap: 2.5rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* 1. Propietario Card (Lic. Willian Méndez) */
+.pro-candidate-card-propietario {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  padding: 2.8rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.pro-candidate-card-propietario:hover {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 122, 61, 0.25);
+}
+
+/* 2. Suplente Card (Licda. Carmen Torres Jiménez) */
+.pro-candidate-card-suplente {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  padding: 2.8rem 2.2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.pro-candidate-card-suplente:hover {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+  border-color: rgba(2, 132, 199, 0.25);
+}
+
+/* Card Header Strip */
+.pro-card-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.pro-casilla-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pro-casilla-pill {
+  background: var(--pdc-green);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.28rem 0.75rem;
+  border-radius: 6px;
+}
+
+.pro-casilla-dept {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--slate-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pro-coalition-chip {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-600);
+  background: var(--slate-100);
+  padding: 0.28rem 0.75rem;
+  border-radius: 6px;
+}
+
+.pro-role-badge {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--pdc-green);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(0, 122, 61, 0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 122, 61, 0.18);
+}
+
+.pro-role-suplente {
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.2);
+}
+
+/* Candidate Intro Row */
+.pro-candidate-intro-row {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.pro-candidate-avatar-wrap {
+  position: relative;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--pdc-green);
+  box-shadow: 0 4px 16px rgba(0, 122, 61, 0.22);
+  flex-shrink: 0;
+}
+
+.pro-candidate-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pro-avatar-status-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  background: #22c55e;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.pro-candidate-hero-name {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--slate-900);
+  margin: 0 0 0.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.pro-candidate-origin-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--slate-600);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* Credentials Grid */
+.pro-credentials-section {
+  margin-bottom: 2rem;
+}
+
+.pro-credentials-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pdc-green);
+  margin-bottom: 1rem;
+}
+
+.pro-credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+
+.pro-credential-card-item {
+  background: #fafbfc;
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--pdc-green);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+}
+
+.pro-credential-card-item:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+  border-color: rgba(0, 122, 61, 0.3);
+}
+
+.pro-credential-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--pdc-green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pro-credential-degree {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.pro-credential-desc {
+  font-size: 0.78rem;
+  color: var(--slate-500);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Candidate Verbatim Quote Callout */
+.pro-candidate-quote-callout {
+  background: linear-gradient(135deg, rgba(0, 122, 61, 0.05) 0%, rgba(194, 155, 56, 0.06) 100%);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 0 10px 10px 0;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.pro-candidate-quote-icon {
+  color: var(--accent-gold);
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.pro-candidate-quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #1e293b !important;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Territorial Commitment */
+.pro-territorial-commitment-box {
+  background: #fafbfc;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+}
+
+.pro-commitment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--slate-900);
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+
+.pro-commitment-text {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--slate-600);
+  margin: 0;
+}
+
+/* Suplente Profile Header */
+.pro-suplente-profile-header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.pro-suplente-photo-wrap {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.2rem;
+  border: 3px solid #0284c7;
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.2);
+}
+
+.pro-suplente-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pro-suplente-name {
+  font-family: var(--font-sans);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  margin: 0 0 0.35rem;
+}
+
+.pro-suplente-role-tag {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.9rem;
+}
+
+.pro-suplente-desc {
+  font-size: 0.88rem;
+  color: var(--slate-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Coalition Highlight Box */
+.pro-coalition-highlight-card {
+  background: #fafbfc;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.pro-coalition-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.pro-coalition-card-text {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--slate-600);
+  margin: 0 0 1.2rem;
+}
+
+.pro-coalition-logos-duo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.pro-coalition-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--slate-600);
+}
+
+.pro-partner-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(10%);
+  transition: all 0.2s ease;
+}
+
+.pro-coalition-logo-wrap:hover .pro-partner-logo {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.pro-coalition-plus {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--slate-400);
+}
+
+/* Suplente Pillars */
+.pro-suplente-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.pro-pillar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.84rem;
+  color: var(--slate-700);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------
+   5. Interactive Salvadoran Ballot Simulator
+   -------------------------------------------------- */
+.pro-simulator-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pro-ballot-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.pro-ballot-box {
+  background: #fffefb;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+  position: relative;
+}
+
+.pro-ballot-header {
+  text-align: center;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 1.4rem;
+  margin-bottom: 2.2rem;
+}
+
+.pro-ballot-header-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--slate-500);
+  margin-bottom: 0.5rem;
+}
+
+.pro-ballot-header-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.pro-ballot-header-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--pdc-green);
+  text-transform: uppercase;
+}
+
+.pro-ballot-dot-sep {
+  color: var(--slate-300);
+}
+
+.pro-ballot-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.pro-ballot-slot {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.pro-ballot-slot:hover {
+  border-color: var(--pdc-green);
+  box-shadow: 0 8px 24px rgba(0, 122, 61, 0.12);
+  transform: translateY(-2px);
+}
+
+.pro-ballot-slot.marked {
+  border-color: #dc2626;
+  background: #fffcfc;
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.12);
+}
+
+.pro-slot-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+  margin-bottom: 1rem;
+}
+
+.pro-slot-badge-gold {
+  color: #b45309;
+}
+
+.pro-slot-img-wrap {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.pro-slot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.pro-slot-candidate-photo {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.pro-mark-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(220, 38, 38, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.animate-stamp {
+  animation: stampPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes stampPop {
+  0% { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pro-x-mark {
+  font-family: sans-serif;
+  font-size: 6rem;
+  font-weight: 900;
+  color: #dc2626;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
+}
+
+.pro-slot-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pro-slot-casilla-tag {
+  display: inline-block;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.pro-slot-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+.pro-slot-detail {
+  font-size: 0.84rem;
+  color: var(--slate-500);
+}
+
+.pro-slot-action-hint {
+  margin-top: 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--pdc-green);
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  background: var(--pdc-green-light);
+  border-radius: 9999px;
+}
+
+.pro-ballot-slot.marked .pro-slot-action-hint {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+.pro-ballot-status-bar {
+  border-top: 2px solid #0f172a;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.pro-ballot-status-info {
+  flex: 1;
+}
+
+.pro-ballot-status-valid {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.pro-ballot-status-valid strong {
+  display: block;
+  font-size: 0.94rem;
+  color: #16a34a;
+  letter-spacing: 0.04em;
+}
+
+.pro-ballot-status-valid p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: var(--slate-700);
+  line-height: 1.4;
+}
+
+.pro-ballot-status-pending {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.pro-ballot-status-pending strong {
+  display: block;
+  font-size: 0.94rem;
+  color: var(--slate-800);
+}
+
+.pro-ballot-status-pending p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: var(--slate-500);
+}
+
+.pro-ballot-guide-box {
+  margin-top: 1.5rem;
+  background: rgba(0, 122, 61, 0.04);
+  border: 1px solid rgba(0, 122, 61, 0.18);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+}
+
+.pro-ballot-guide-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.pro-ballot-guide-item strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--slate-900);
+  margin-bottom: 0.2rem;
+}
+
+.pro-ballot-guide-item p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--slate-600);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------
+   6. 12 Proposals (Blueprint) Section
+   -------------------------------------------------- */
+.pro-proposals-section {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pro-proposals-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pro-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pro-filter-tab {
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  background: var(--slate-100);
+  color: var(--slate-700);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.pro-filter-tab:hover {
+  background: var(--slate-200);
+  color: var(--slate-900);
+}
+
+.pro-filter-tab.active {
+  background: var(--pdc-green);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 122, 61, 0.2);
+}
+
+.pro-search-box {
+  position: relative;
+  min-width: 280px;
+}
+
+.pro-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--slate-400);
+}
+
+.pro-search-input {
+  width: 100%;
+  padding: 0.58rem 2.4rem 0.58rem 2.6rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-medium);
+  font-size: 0.86rem;
+  outline: none;
+  background: #ffffff;
+  color: var(--slate-800);
+  transition: all 0.2s ease;
+}
+
+.pro-search-input:focus {
+  border-color: var(--pdc-green);
+  box-shadow: 0 0 0 3px rgba(0, 122, 61, 0.12);
+}
+
+.pro-search-clear {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: var(--slate-400);
+  padding: 0.2rem 0.4rem;
+}
+
+.pro-results-count {
+  font-size: 0.82rem;
+  color: var(--slate-500);
+  margin-bottom: 2rem;
+}
+
+.pro-proposals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.pro-proposal-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.pro-proposal-card:hover {
+  border-color: rgba(0, 122, 61, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 122, 61, 0.08);
+  transform: translateY(-3px);
+}
+
+.pro-prop-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.pro-prop-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pro-prop-num {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--pdc-green);
+}
+
+.pro-prop-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+  background: var(--slate-100);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.pro-prop-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--pdc-green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pro-prop-title {
+  font-family: var(--font-sans);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  line-height: 1.3;
+  margin: 0 0 0.55rem;
+}
+
+.pro-prop-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--slate-600);
+  flex-grow: 1;
+  margin: 0 0 1rem;
+}
+
+.pro-prop-highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.8rem;
+  background: rgba(0, 122, 61, 0.08);
+  border: 1px solid rgba(0, 122, 61, 0.2);
+  border-radius: 9999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--pdc-green);
+  width: fit-content;
+  margin-top: auto;
+}
+
+.pro-prop-highlight-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--pdc-green);
+}
+
+.pro-no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--slate-50);
+  border-radius: 8px;
+  color: var(--slate-600);
+}
+
+/* --------------------------------------------------
+   7. 9-Axes Municipal Wheel Dashboard (Luis Ortiz)
+   -------------------------------------------------- */
+.pro-radial-section {
+  background-color: #fafbfc;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pro-radial-dashboard {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.pro-radial-control-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pro-hub-card {
+  background: linear-gradient(135deg, #005a2c 0%, #007a3d 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 122, 61, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pro-hub-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #86efac;
+  margin-bottom: 0.4rem;
+}
+
+.pro-hub-title {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.3rem;
+}
+
+.pro-hub-sub {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.pro-axes-button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.pro-axis-selector-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pro-axis-selector-btn:hover {
+  border-color: var(--pdc-green);
+  background: rgba(0, 122, 61, 0.02);
+  transform: translateX(2px);
+}
+
+.pro-axis-selector-btn.active {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.pro-axis-num {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--pdc-green);
+  flex-shrink: 0;
+}
+
+.pro-axis-selector-btn.active .pro-axis-num {
+  color: #86efac;
+}
+
+.pro-axis-btn-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  flex-grow: 1;
+}
+
+.pro-axis-btn-icon {
+  color: var(--slate-400);
+  flex-shrink: 0;
+}
+
+.pro-axis-selector-btn.active .pro-axis-btn-icon {
+  color: #86efac;
+}
+
+/* Detail Side */
+.pro-radial-detail-side {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.pro-detail-header-card {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.pro-detail-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.pro-detail-badge {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pdc-green);
+}
+
+.pro-detail-icon-pill {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--pdc-green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pro-detail-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin: 0 0 0.3rem;
+}
+
+.pro-detail-tagline {
+  font-size: 0.95rem;
+  color: var(--slate-500);
+  margin: 0;
+}
+
+.pro-programs-list-wrap {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.pro-programs-heading {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+  margin-bottom: 1rem;
+}
+
+.pro-programs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.pro-program-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 6px;
+  background: var(--slate-50);
+  border: 1px solid var(--border-light);
+}
+
+.pro-program-bullet-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.pro-program-text {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--slate-800);
+  line-height: 1.5;
+}
+
+.pro-detail-footer {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pro-detail-source {
+  font-size: 0.82rem;
+  color: var(--slate-500);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------
+   8. District Impact Section
+   -------------------------------------------------- */
+.pro-district-section {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pro-district-tabs-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.pro-district-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  background: var(--slate-100);
+  color: var(--slate-700);
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.pro-district-tab-btn:hover {
+  background: var(--slate-200);
+  color: var(--slate-900);
+}
+
+.pro-district-tab-btn.active {
+  background: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+}
+
+.pro-district-active-pip {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+}
+
+.pro-district-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fafbfc;
+  border: 1px solid var(--border-medium);
+  border-radius: 12px;
+  padding: 2.8rem 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+}
+
+.pro-district-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1.6rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.pro-district-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pdc-green);
+  background: var(--pdc-green-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+.pro-district-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin: 0 0 0.4rem;
+}
+
+.pro-district-lead {
+  font-size: 0.98rem;
+  color: var(--slate-600);
+  margin: 0;
+  max-width: 600px;
+}
+
+.pro-district-seal {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  text-align: right;
+}
+
+.pro-district-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.pro-district-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.pro-district-item:hover {
+  border-color: rgba(0, 122, 61, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.pro-district-icon-wrap {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.pro-district-item-content {
+  flex-grow: 1;
+}
+
+.pro-district-item-num {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pdc-green);
+  margin-bottom: 0.25rem;
+}
+
+.pro-district-item-content p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--slate-800);
+  line-height: 1.5;
+}
+
+.pro-district-card-footer {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.4rem;
+}
+
+/* --------------------------------------------------
+   9. Official Documents Vault Section
+   -------------------------------------------------- */
+.pro-docs-section {
+  background-color: #fafbfc;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pro-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.pro-doc-card {
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: 12px;
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.pro-doc-card:hover {
+  border-color: var(--pdc-green);
+  box-shadow: 0 10px 30px rgba(0, 122, 61, 0.08);
+  transform: translateY(-2px);
+}
+
+.pro-doc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.pro-doc-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: var(--pdc-green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pro-doc-meta {
+  text-align: right;
+}
+
+.pro-doc-tag {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pdc-green);
+}
+
+.pro-doc-date {
+  font-size: 0.78rem;
+  color: var(--slate-500);
+  font-weight: 600;
+}
+
+.pro-doc-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  line-height: 1.3;
+  margin: 0 0 0.8rem;
+}
+
+.pro-doc-desc {
+  font-size: 0.94rem;
+  color: var(--slate-600);
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.pro-doc-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0 0 2rem;
+  flex-grow: 1;
+}
+
+.pro-doc-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--slate-700);
+}
+
+.pro-doc-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.pro-docs-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pro-docs-guarantee p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--slate-600);
+}
+
+/* --------------------------------------------------
+   10. Authentic Quote & Callout Banner
+   -------------------------------------------------- */
+.pro-quote-section {
+  padding: 5rem 0;
+  background: #06381e;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pro-quote-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.55;
+  color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto 1.4rem;
+  font-style: italic;
+}
+
+.pro-quote-author {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #86efac;
+}
+
+/* --------------------------------------------------
+   11. Pro Minimalist Footer
+   -------------------------------------------------- */
+.pro-footer {
+  background-color: #031e10;
+  color: #ffffff;
+  padding: 4.5rem 0 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pro-footer-callout {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.6rem 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.pro-footer-callout-text p {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.pro-footer-callout-text span {
+  font-size: 0.82rem;
+  color: #86efac;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pro-footer-main {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.pro-footer-logos-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.pro-footer-logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.pro-footer-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.3rem;
+}
+
+.pro-footer-brand-sub {
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1.2rem;
+}
+
+.pro-footer-phone-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pro-footer-phone-link {
+  color: #ffffff;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pro-footer-phone-link:hover {
+  color: #86efac;
+}
+
+.pro-footer-links-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #86efac;
+  margin-bottom: 1.2rem;
+}
+
+.pro-footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pro-footer-nav-list a {
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pro-footer-nav-list a:hover {
+  color: #ffffff;
+}
+
+.pro-footer-formula-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+}
+
+.pro-footer-formula-card strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.92rem;
+}
+
+.pro-footer-formula-card span {
+  display: block;
+  color: #86efac;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.pro-footer-formula-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.pro-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pro-footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.pro-footer-copy {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* --------------------------------------------------
+   12. Pro Buttons System
+   -------------------------------------------------- */
+.btn-pro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-pro-green {
+  background-color: var(--pdc-green);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.btn-pro-green:hover {
+  background-color: var(--pdc-green-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 122, 61, 0.3);
+  color: #ffffff;
+}
+
+.btn-pro-glow {
+  box-shadow: 0 4px 18px rgba(0, 122, 61, 0.35);
+}
+
+.btn-pro-outline {
+  background: transparent;
+  color: var(--slate-800);
+  border: 1px solid var(--border-medium);
+}
+
+.btn-pro-outline:hover {
+  background: var(--slate-100);
+  border-color: var(--slate-400);
+  color: var(--slate-900);
+}
+
+.btn-pro-ghost {
+  background: transparent;
+  color: var(--slate-600);
+  border: 1px solid transparent;
+}
+
+.btn-pro-ghost:hover {
+  background: var(--slate-100);
+  color: var(--slate-900);
+}
+
+.btn-pro-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.8rem;
+}
+
+.btn-pro-full {
+  width: 100%;
+}
+
+/* --------------------------------------------------
+   13. Toast Notification Pill
+   -------------------------------------------------- */
+.pro-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1.3rem;
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  font-size: 0.88rem;
+  font-weight: 600;
+  animation: toastIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pro-toast-success {
+  border-left: 4px solid #22c55e;
+}
+
+.pro-toast-info {
+  border-left: 4px solid #38bdf8;
+}
+
+.pro-toast-close {
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 0.4rem;
+  padding: 0.2rem;
+}
+
+.pro-toast-close:hover {
+  color: #ffffff;
+}
+
+/* --------------------------------------------------
+   14. Responsive Media Queries
+   -------------------------------------------------- */
+@media (max-width: 1080px) {
+  .opencity-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .opencity-candidate-col {
+    order: 2;
+  }
+
+  .opencity-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pro-candidates-grid,
+  .pro-candidates-duo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-proposals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pro-radial-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .pro-desktop-nav {
+    display: none;
+  }
+
+  .pro-mobile-toggle {
+    display: flex;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .opencity-green-block {
+    padding: 2.2rem 1.6rem;
+  }
+
+  .opencity-slider-controls {
+    bottom: 1.2rem;
+    right: 1.2rem;
+  }
+
+  .pro-proposals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-district-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .pro-topbar-inner {
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+
+  .pro-brand-name {
+    font-size: 1.05rem;
+  }
+
+  .opencity-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .opencity-hero-sub {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .opencity-candidate-cutout {
+    max-height: 380px;
+  }
+
+  .opencity-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-proposals-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pro-search-box {
+    min-width: 100%;
+  }
+
+  .pro-axes-button-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  .pro-candidates-fullwidth {
+    padding: 0 1rem;
+  }
+
+  .pro-candidate-intro-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pro-candidate-card-propietario,
+  .pro-candidate-card-suplente {
+    padding: 1.8rem 1.2rem;
+  }
+}
