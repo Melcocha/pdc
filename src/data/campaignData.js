@@ -48,146 +48,134 @@ export const deputyCandidate = {
 export const deputyProposals = [
   {
     id: 1,
-    title: "Apoyo Directo al Sector Pesquero Artesanal",
-    shortTitle: "Subsidio al Combustible Pesquero",
+    tag: "Combustible Pesquero",
+    title: "Subsidio al Combustible Pesquero",
+    officialTitle: "Apoyo Directo al Sector Pesquero Artesanal",
     category: "Economía y Pesca",
-    tag: "Pesca & Ahorro",
-    highlight: "-$0.20 / Galón de Ahorro",
     shortDesc: "Rebaja directa de $0.20 por galón de combustible para abaratar los costos en cada faena del pescador artesanal.",
     desc: "Impulsaremos iniciativas que vayan con el enfoque de apoyo a los pescadores, gestionando la reducción de $0.20 ctvs. por galón de combustible comprado para ejercer labores de pesca artesanal.",
-    icon: "Fish",
+    image: "/assets/slide_pescadores.png",
     impact: "Ahorro directo inmediato en faenas diarias de pesca"
   },
   {
     id: 2,
-    title: "Homologación de Licencias de Moto y Carro",
-    shortTitle: "Una Sola Licencia (Moto y Carro)",
+    tag: "Licencia Única",
+    title: "Una Sola Licencia (Moto y Carro)",
+    officialTitle: "Homologación de Licencias de Moto y Carro",
     category: "Alivio Económico",
-    tag: "Bolsillo Familiar",
-    highlight: "1 Solo Trámite y Pago",
     shortDesc: "Unificación de licencias en un solo carnet para no pagar doble trámite ni doble renovación si manejas moto y vehículo.",
     desc: "Se propondrá la homologación de las licencias de conducir de moto y carro para aquellos conductores que tengan ambos vehículos, garantizando un alivio económico directo a las familias.",
-    icon: "CreditCard",
+    image: "/assets/prop_transporte.jpg",
     impact: "Un solo trámite y reducción de costos dobles"
   },
   {
     id: 3,
-    title: "Atención Multidisciplinaria Estudiantil",
-    shortTitle: "Apoyo Psicológico en Escuelas",
+    tag: "Psicología Escolar",
+    title: "Apoyo Psicológico en Escuelas",
+    officialTitle: "Atención Multidisciplinaria Estudiantil",
     category: "Educación",
-    tag: "Juventud Escolar",
-    highlight: "Salud Mental en Aulas",
     shortDesc: "Psicólogos y trabajadores sociales permanentes en centros escolares para orientar y proteger a nuestros estudiantes.",
     desc: "Propondremos una pieza de correspondencia a la comisión de educación para crear un equipo multidisciplinario que atienda diferentes problemáticas estudiantiles.",
-    icon: "GraduationCap",
+    image: "/assets/slide_estudiantes.jpg",
     impact: "Psicología, trabajo social y tutoría en centros escolares"
   },
   {
     id: 4,
-    title: "Guarderías Urbanas para Padres Trabajadores",
-    shortTitle: "Guarderías Infantiles Gratuitas",
+    tag: "Guarderías Gratis",
+    title: "Guarderías Infantiles Gratuitas",
+    officialTitle: "Guarderías Urbanas para Padres Trabajadores",
     category: "Desarrollo Social",
-    tag: "Infancia y Madres",
-    highlight: "Cuidado Seguro y Gratuito",
     shortDesc: "Espacios seguros con personal capacitado para cuidar a tus hijos mientras sales a trabajar con tranquilidad.",
     desc: "Se realizarán gestiones para la creación de guarderías en las áreas urbanas con personal especializado en el cuidado de los niños mientras los padres trabajan.",
-    icon: "Baby",
+    image: "/assets/prop_guarderias.jpg",
     impact: "Cuidado seguro y digno mientras mamá y papá laboran"
   },
   {
     id: 5,
-    title: "Creación de Nuevos Cementerios Municipales",
-    shortTitle: "Nuevos Cementerios Municipales",
+    tag: "Nuevos Cementerios",
+    title: "Nuevos Cementerios Municipales",
+    officialTitle: "Creación de Nuevos Cementerios Municipales",
     category: "Obras Públicas y VMT",
-    tag: "Servicios Públicos",
-    highlight: "Presupuesto Nacional Directo",
     shortDesc: "Fondos nacionales asignados para construir nuevos camposantos y resolver la saturación en los municipios de La Unión.",
     desc: "Se realizarán las gestiones precisas para inscribir en el presupuesto general de la nación la creación de nuevos cementerios municipales en el departamento de La Unión.",
-    icon: "MapPin",
-    impact: "Solución al hacinamiento y dignidad para las familias"
+    image: "/assets/prop_cementerio.jpg",
+    impact: "Solución al hacinamiento y tranquilidad para las familias"
   },
   {
     id: 6,
-    title: "Estación de Bomberos y Semáforos Viales",
-    shortTitle: "Estación de Bomberos y Semáforos",
+    tag: "Bomberos y Semáforos",
+    title: "Estación de Bomberos y Semáforos",
+    officialTitle: "Estación de Bomberos y Semáforos Viales",
     category: "Seguridad y Prevención",
-    tag: "Protección Ciudadana",
-    highlight: "Santa Rosa y La Unión",
     shortDesc: "Cuerpo de bomberos en Santa Rosa de Lima y red de semáforos modernos en La Unión para evitar accidentes y salvar vidas.",
     desc: "Se gestionará la creación de una estación de bomberos en el distrito de Santa Rosa de Lima, así como la instalación de un sistema de semáforos para la cabecera de La Unión.",
-    icon: "Flame",
+    image: "/assets/prop_bomberos.jpg",
     impact: "Respuesta inmediata a emergencias y orden vial"
   },
   {
     id: 7,
-    title: "Nueva Terminal de Buses y Pasarelas Peatonales",
-    shortTitle: "Terminal de Buses y 2 Pasarelas",
+    tag: "Terminal y Pasarelas",
+    title: "Terminal de Buses y 2 Pasarelas",
+    officialTitle: "Nueva Terminal de Buses y Pasarelas Peatonales",
     category: "Obras Públicas y VMT",
-    tag: "Conectividad Urbana",
-    highlight: "Hospital y Col. Belén",
     shortDesc: "Terminal de buses digna y 2 pasarelas peatonales: frente al Hospital de La Unión y en la entrada a Colonia Belén.",
     desc: "Se realizará una pieza de correspondencia para el Ministerio de Obras Públicas y el VMT para la creación de una nueva terminal de buses de La Unión, así como dos pasarelas peatonales: una frente al hospital de La Unión y la otra sobre la entrada a la colonia Belén salida a San Miguel.",
-    icon: "Bus",
+    image: "/assets/prop_transporte.jpg",
     impact: "Seguridad peatonal hospitalaria y transporte ordenado"
   },
   {
     id: 8,
-    title: "Capital Semilla y Proyectos para Artistas Nacionales",
-    shortTitle: "Capital Semilla para Artistas",
+    tag: "Capital a Artistas",
+    title: "Capital Semilla para Artistas",
+    officialTitle: "Capital Semilla y Proyectos para Artistas Nacionales",
     category: "Arte y Cultura",
-    tag: "Cultura y Talento",
-    highlight: "Fondos No Reembolsables",
     shortDesc: "Apoyo económico directo y fondos semilla para que artesanos, músicos y pintores locales puedan vivir de su talento.",
     desc: "Se realizará una solicitud para la comisión de arte y cultura en donde se puedan fortalecer a todos los artistas nacionales bajo una línea de proyectos y capital semilla.",
-    icon: "Palette",
+    image: "/assets/slide_artesanias.png",
     impact: "Impulso económico directo a músicos, pintores y artesanos"
   },
   {
     id: 9,
-    title: "Bachillerato en Artes en Distritos de La Unión",
-    shortTitle: "Bachillerato en Artes en Distritos",
+    tag: "Bachillerato en Artes",
+    title: "Bachillerato en Artes en Distritos",
+    officialTitle: "Bachillerato en Artes en Distritos de La Unión",
     category: "Educación",
-    tag: "Formación Técnica",
-    highlight: "En 4 Distritos Clave",
     shortDesc: "Apertura del bachillerato artístico en Conchagua, Yayantique, El Carmen y La Unión para que los jóvenes no migren.",
     desc: "Se impulsará una pieza de correspondencia para que se instale el bachillerato en artes en diferentes distritos: Yayantique, El Carmen, La Unión y Conchagua.",
-    icon: "BookOpen",
+    image: "/assets/slide_estudiantes.jpg",
     impact: "Oportunidades vocacionales descentralizadas"
   },
   {
     id: 10,
-    title: "Aumento de Presupuesto en Salud y Especialistas",
-    shortTitle: "Médicos Especialistas en Hospitales",
+    tag: "Médicos Especialistas",
+    title: "Médicos Especialistas en Hospitales",
+    officialTitle: "Aumento de Presupuesto en Salud y Especialistas",
     category: "Salud Pública",
-    tag: "Salud Hospitalaria",
-    highlight: "Atención a Crónicos y Medicinas",
     shortDesc: "Más médicos especialistas en hospitales públicos de La Unión para atender diabetes, hipertensión y enfermedades crónicas.",
     desc: "Se realizarán gestiones para aumentar el presupuesto de salud de cada hospital público, fortaleciendo el apoyo para la contratación de profesionales para el seguimiento de enfermedades crónicas.",
-    icon: "HeartPulse",
+    image: "/assets/prop_salud.jpg",
     impact: "Médicos especialistas permanentes y medicación oportuna"
   },
   {
     id: 11,
-    title: "Fortalecimiento Presupuestario a Centros Escolares",
-    shortTitle: "Presupuesto Digno para Escuelas",
+    tag: "Presupuesto Escolar",
+    title: "Presupuesto Digno para Escuelas",
+    officialTitle: "Fortalecimiento Presupuestario a Centros Escolares",
     category: "Educación",
-    tag: "Escuelas Dignas",
-    highlight: "Aulas Equipadas a Tiempo",
     shortDesc: "Aumento del presupuesto anual para que cada escuela pública cuente con pupitres, techos dignos y materiales escolares.",
     desc: "Se realizará la gestión desde la comisión de Educación para fortalecer mayormente con los presupuestos anuales a cada Centro Escolar del país.",
-    icon: "School",
+    image: "/assets/education_tech.jpg",
     impact: "Aulas equipadas, mantenimiento y materiales a tiempo"
   },
   {
     id: 12,
-    title: "Primer Empleo Juvenil Sin Requisito de Experiencia",
-    shortTitle: "Primer Empleo Sin Experiencia Previa",
+    tag: "Primer Empleo Joven",
+    title: "Primer Empleo Sin Experiencia Previa",
+    officialTitle: "Primer Empleo Juvenil Sin Requisito de Experiencia",
     category: "Empleo Joven",
-    tag: "Oportunidad Joven",
-    highlight: "Para Jóvenes Graduados",
     shortDesc: "Eliminación de la exigencia de experiencia laboral previa para abrir de verdad las puertas del trabajo a los jóvenes.",
     desc: "Se realizará la gestión para que se quite como requerimiento la experiencia previa para quienes por primera vez solicitan empleo.",
-    icon: "Briefcase",
+    image: "/assets/prop_empleo.jpg",
     impact: "Apertura real del mercado laboral para recién graduados"
   }
 ];
@@ -255,8 +243,8 @@ export const municipalPlan = {
       id: "salud",
       number: "1",
       name: "Salud y Prevención",
-      icon: "HeartPulse",
-      tagline: "Medicamentos al costo y atención preventiva",
+      tagline: "Medicamentos al costo y atención médica preventiva",
+      image: "/assets/prop_salud.jpg",
       programs: [
         "Venta al costo de Medicamentos de uso común (Farmacia Municipal).",
         "Gestión para la habilitación de FOSALUD en algunos Distritos.",
@@ -268,14 +256,14 @@ export const municipalPlan = {
       id: "agricultura",
       number: "2",
       name: "Agricultura y Ganadería",
-      icon: "Wheat",
       tagline: "Apoyo técnico, maquinaria y banco de labranza",
+      image: "/assets/prop_agricultura.jpg",
       programs: [
         "Gestión para la construcción de Tiangue y Rastro Municipal.",
         "Programa de Vacunación de Ganado.",
-        "Creación de Huertos Caseros y Diversificación de Producción (Mini Plantación familiar de Papaya, Limón, granjas porcina y avícola).",
+        "Creación de Huertos Caseros y Diversificación de Producción (Papaya, Limón, granjas porcina y avícola).",
         "Asistencia Técnica en Siembra para agricultores y Ganaderos.",
-        "Habilitación de Bodegas de Herramientas de Labranza para Prevención de Riesgos (Cumas, Botas, Sombreros); venta al costo de medicamentos veterinarios básicos.",
+        "Habilitación de Bodegas de Herramientas de Labranza para Prevención de Riesgos.",
         "Creación de Reservorio Familiar de Agua para Agricultores y Ganaderos.",
         "Servicio de Maquinaria Agrícola: picadoras, desgranadora y Tractor Agrícola."
       ]
@@ -284,31 +272,28 @@ export const municipalPlan = {
       id: "turismo",
       number: "3",
       name: "Turismo y Pesca",
-      icon: "Ship",
       tagline: "Desarrollo costero, lancha ambulancia y guías locales",
+      image: "/assets/slide_pescadores.png",
       programs: [
         "Mini muelle y Varadero en puntos estratégicos de la zona costera.",
         "Mini muelle en área de restaurantes familiares en lagunas del municipio.",
         "Adquisición de Lancha Ambulancia para emergencias marítimas e insulares.",
         "Gestión para la Creación de un Centro Municipal de Acopio Pesquero.",
-        "Plan de Fomento del Turismo Local, Contratación de 20 guías turísticos.",
-        "Programa de Educación en Turismo y Pesca.",
-        "Dotación de Insumos Básicos para Atención a Turistas en Zona Costera (Mesas, sillas, hamacas, otros).",
-        "Creación de Unidad Municipal de Atención y auxilio en Carretera.",
-        "Creación de una ruta especial de servicio de tren de aseo para atender a restaurantes y hoteles de la zona costera y Centro de La Unión."
+        "Plan de Fomento del Turismo Local con contratación de 20 guías turísticos.",
+        "Dotación de insumos para atención a turistas y unidad de auxilio en carretera."
       ]
     },
     {
       id: "valores",
       number: "4",
       name: "Valores Morales y Convivencia",
-      icon: "Users",
       tagline: "Prevención, deporte multidisciplinario y tradición",
+      image: "/assets/civic_townhall.jpg",
       programs: [
-        "Programa de Prevención y Recuperación de Alcohólicos y Drogadictos, personas en condiciones de abandono.",
-        "Adecuación de Mini Centros de Convivencia Social.",
-        "Programa de Fomento de Valores en Instituciones Públicas y Privadas del municipio, con enfoque eclesiástico.",
-        "Asignación de Partida Presupuestaria a Futbol, Baloncesto, Volleyball, Ping Pong, Karate y federación de remo.",
+        "Programa de Prevención y Recuperación para personas en condiciones de vulnerabilidad.",
+        "Adecuación de Mini Centros de Convivencia Social en las comunidades.",
+        "Fomento de Valores en instituciones públicas y privadas del municipio.",
+        "Asignación Presupuestaria a Fútbol, Baloncesto, Volleyball, Ping Pong, Karate y Remo.",
         "Creación de Bandas para Fiestas Patronales en todo el municipio."
       ]
     },
@@ -316,68 +301,64 @@ export const municipalPlan = {
       id: "administracion",
       number: "5",
       name: "Administración Municipal (CEMAS)",
-      icon: "Building2",
       tagline: "Centro Solidario y reducción de costos del agua",
+      image: "/assets/green_energy_city.jpg",
       programs: [
-        "Creación de Centro Municipal de Atención Solidario (CEMAS), con Servicio de Pago de Energía Eléctrica, Cobro de Remesas entre otros, todos los servicios municipales, integración de mini bodega de herramienta de labranza; venta a costo de medicamento de uso común; productos veterinarios básicos.",
-        "Realización de Costos de Servicio de Agua Por Comunidad y Disminución de Cobro por servicio.",
-        "Programa de Monitoreo y Verificación del agua potable, suministrada por la municipalidad."
+        "Creación del Centro Municipal de Atención Solidario (CEMAS) para pago de energía, cobro de remesas y servicios municipales integrados.",
+        "Realización de costos de servicio de agua por comunidad y disminución del cobro a las familias.",
+        "Programa de Monitoreo y Verificación del agua potable suministrada por la municipalidad."
       ]
     },
     {
       id: "educacion",
       number: "6",
       name: "Educación y Cultura",
-      icon: "GraduationCap",
       tagline: "Becas superiores, bicicletas y festivales culturales",
+      image: "/assets/slide_estudiantes.jpg",
       programs: [
-        "Asignación Presupuestaria para las fiestas patronales en cada caserío, Consejo Parroquial.",
-        "Creación del Festival del Farolito, Festivales Gastronómicos, entre otros.",
-        "Celebración del Santo al Pescador y dotación de estímulos.",
-        "Becas para estudiantes de educación Media y Superior.",
-        "Dotación de Bicicletas a alumnos cuyas distancias al Centro Escolar es muy lejana.",
-        "Asignación Presupuestaria para Celebración y Conmemoración de Eventos Eclesiásticos, Cívicos y Culturales.",
-        "Creación de cultura vial, certificar gestores de Tráfico con agentes del CAM, convenio con empresa privada para la generación de parqueos y áreas peatonales."
+        "Becas para estudiantes de educación Media y Superior del municipio.",
+        "Dotación de Bicicletas a alumnos con largas distancias hacia su Centro Escolar.",
+        "Creación del Festival del Farolito y festivales gastronómicos locales.",
+        "Celebración del Santo al Pescador y dotación de estímulos anuales.",
+        "Presupuesto para festividades comunitarias, patronales y culturales."
       ]
     },
     {
       id: "medio-ambiente",
       number: "7",
       name: "Medio Ambiente",
-      icon: "Trees",
       tagline: "Planta de transferencia, compostaje y viveros",
+      image: "/assets/green_energy_city.jpg",
       programs: [
         "Creación de una mini planta de transferencia de desechos sólidos.",
-        "Apoyo en la generación de sistema de compostaje en Instituciones Públicas y Privadas.",
-        "Eliminación de Botaderos a cielo abierto.",
-        "Ampliación del Servicio de Recolección de Desechos Sólidos.",
-        "Creación de Viveros por Distrito Municipal."
+        "Eliminación definitiva de botaderos a cielo abierto.",
+        "Ampliación del servicio de recolección de desechos sólidos en comunidades.",
+        "Creación de Viveros por cada Distrito Municipal."
       ]
     },
     {
       id: "infraestructura",
       number: "8",
       name: "Infraestructura",
-      icon: "Road",
       tagline: "Mejoramiento vial MOP y presupuestos por caserío",
+      image: "/assets/prop_transporte.jpg",
       programs: [
-        "Programa Anual de Mejoramiento Vial, mediante Convenio del MOP.",
-        "Asignación de monto por caserío para la elaboración de proyecto en cogestión con las comunidades organizadas.",
-        "Aplicación de Metodología de Participación Ciudadana para la priorización de los proyectos de infraestructura."
+        "Programa Anual de Mejoramiento Vial continuo mediante Convenio con el MOP.",
+        "Asignación de monto económico por caserío para proyectos en cogestión comunitaria.",
+        "Metodología de Participación Ciudadana para priorizar las obras más urgentes."
       ]
     },
     {
       id: "mujer",
       number: "9",
-      name: "Mujer",
-      icon: "HeartHandshake",
+      name: "Mujer y Emprendimiento",
       tagline: "Mini Banco Municipal y talleres vocacionales",
+      image: "/assets/prop_empleo.jpg",
       programs: [
-        "Creación de Mini Banco Municipal, para el emprendimiento de Actividad Comercial y Servicio.",
-        "Mejoramiento de Servicio de Barrido de Calles en todo el municipio, con cuadrillas de mujeres.",
-        "Asignación Partida Presupuestaria para el Desarrollo y Generación de Actividad Económica al Sector Mujer de todo el municipio.",
-        "Talleres Vocacionales por cada comunidad con un enfoque de emprendimiento.",
-        "Gestión de Inversionistas en la diversificación del cultivo, retorno de capital y distribución de ganancias."
+        "Creación del Mini Banco Municipal para financiar emprendimientos y comercio femenino.",
+        "Partida presupuestaria para el desarrollo económico del sector mujer en el municipio.",
+        "Talleres Vocacionales comunitarios con enfoque de negocio productivo.",
+        "Cuadrillas de empleo municipal para mantenimiento y barrido de calles."
       ]
     }
   ]

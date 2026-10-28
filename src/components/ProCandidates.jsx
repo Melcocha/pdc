@@ -4,7 +4,6 @@ import {
   GraduationCap,
   MapPin,
   ShieldCheck,
-  Award,
   CheckCircle2,
   Quote,
   Sparkles
@@ -16,12 +15,6 @@ export default function ProCandidates() {
       <div className="pro-candidates-fullwidth">
         {/* Section Header */}
         <div className="pro-section-header pro-candidates-header">
-          <span className="pro-eyebrow">
-            <span className="pro-eyebrow-pill">
-              <Award size={14} style={{ display: 'inline', marginRight: '6px' }} />
-              Coalición Oficial PDC & Fuerza Solidaria • Elecciones 2027
-            </span>
-          </span>
           <h2 className="pro-title">Fórmula a la Diputación por La Unión</h2>
           <p className="pro-subtitle">
             Liderazgo preparado, profesionalismo comprobado y vocación de servicio para nuestras comunidades.

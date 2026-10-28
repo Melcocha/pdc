@@ -81,8 +81,7 @@ export default function ProNavbar() {
               />
             </div>
             <div className="pro-brand-text">
-              <span className="pro-brand-name">WILLIAN MÉNDEZ</span>
-              <span className="pro-brand-tag">DIPUTADO PROPIETARIO • CASILLA 1</span>
+              <span className="pro-brand-name">Partido Demócrata Cristiano</span>
             </div>
           </a>
 
