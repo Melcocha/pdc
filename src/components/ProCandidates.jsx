@@ -4,24 +4,22 @@ import {
   GraduationCap,
   MapPin,
   ShieldCheck,
-  CheckCircle2,
-  Quote,
-  Sparkles
+  Quote
 } from 'lucide-react';
 
 export default function ProCandidates() {
   return (
     <section className="pro-section pro-candidates-section" id="candidatos">
       <div className="pro-candidates-fullwidth">
-        {/* Section Header */}
-        <div className="pro-section-header pro-candidates-header">
-          <h2 className="pro-title">Fórmula a la Diputación por La Unión</h2>
-          <p className="pro-subtitle">
-            Liderazgo preparado, profesionalismo comprobado y vocación de servicio para nuestras comunidades.
-          </p>
+        {/* Editorial Section Header (Matching Propuestas para el Progreso) */}
+        <div className="pro-candidates-editorial-header">
+          <h2 className="pro-candidates-editorial-title">
+            Fórmula a la Diputación <br />
+            por <em>La Unión</em>
+          </h2>
         </div>
 
-        {/* 100% Width Duo Grid */}
+        {/* Editorial Candidates Duo Grid */}
         <div className="pro-candidates-duo-grid">
           {/* 1. Propietario Card: Lic. Willian Méndez */}
           <div className="pro-candidate-card-propietario">
@@ -82,17 +80,6 @@ export default function ProCandidates() {
                 “{deputyCandidate.message}”
               </p>
             </div>
-
-            {/* Territorial Commitment Card */}
-            <div className="pro-territorial-commitment-box">
-              <div className="pro-commitment-header">
-                <CheckCircle2 size={18} color="var(--pdc-green)" />
-                <strong>Compromiso Territorial con La Unión Sur y La Unión Norte</strong>
-              </div>
-              <p className="pro-commitment-text">
-                {deputyCandidate.commitment}
-              </p>
-            </div>
           </div>
 
           {/* 2. Suplente Card: Licda. Carmen Torres Jiménez & Coalición */}
@@ -145,22 +132,6 @@ export default function ProCandidates() {
                   <img src={campaignData.logos.fs} alt="Fuerza Solidaria" className="pro-partner-logo" />
                   <span>Fuerza Solidaria</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Values / Pillars list */}
-            <div className="pro-suplente-pillars">
-              <div className="pro-pillar-item">
-                <CheckCircle2 size={16} color="var(--pdc-green)" />
-                <span>Representación con paridad de género y cercanía</span>
-              </div>
-              <div className="pro-pillar-item">
-                <CheckCircle2 size={16} color="var(--pdc-green)" />
-                <span>Gestión legislativa coordinada en todo el departamento</span>
-              </div>
-              <div className="pro-pillar-item">
-                <CheckCircle2 size={16} color="var(--pdc-green)" />
-                <span>Monitoreo directo en los distritos y comunidades</span>
               </div>
             </div>
           </div>

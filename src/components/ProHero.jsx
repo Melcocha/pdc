@@ -5,19 +5,34 @@ const heroSlides = [
   {
     id: 1,
     image: '/assets/slide_pescadores.png',
-    title: 'Apoyo Directo a los Pescadores de La Unión.',
+    title: (
+      <>
+        Apoyo Directo a los <br />
+        <em>Pescadores de La Unión</em>
+      </>
+    ),
     description: 'Iniciativas de ley para reducir $0.20 ctvs por galón de combustible y proteger la economía familiar en cada faena.',
   },
   {
     id: 2,
     image: '/assets/slide_estudiantes.jpg',
-    title: 'Educación y Salud Mental para la Juventud.',
+    title: (
+      <>
+        Educación y Salud <br />
+        para la <em>Juventud</em>
+      </>
+    ),
     description: 'Equipos multidisciplinarios de psicología en centros escolares y bachillerato en artes descentralizado en los distritos.',
   },
   {
     id: 3,
     image: '/assets/slide_artesanias.png',
-    title: 'Capital Semilla y Trabajo Digno Local.',
+    title: (
+      <>
+        Capital Semilla y <br />
+        <em>Trabajo Digno Local</em>
+      </>
+    ),
     description: 'Financiamiento no reembolsable y proyectos directos para artesanos, emprendedores y el comercio de nuestras comunidades.',
   },
 ];

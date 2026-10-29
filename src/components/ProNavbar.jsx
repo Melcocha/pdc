@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { campaignData, deputyCandidate } from '../data/campaignData';
-import { Menu, X, Phone, FileText, CheckCircle2, ChevronRight } from 'lucide-react';
+import { campaignData } from '../data/campaignData';
+import { Menu, X, Phone, CheckCircle2, ChevronRight } from 'lucide-react';
 
 export default function ProNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -81,7 +81,10 @@ export default function ProNavbar() {
               />
             </div>
             <div className="pro-brand-text">
-              <span className="pro-brand-name">Partido Demócrata Cristiano</span>
+              <span className="pro-brand-name">
+                <span className="pro-brand-name-full">Partido Demócrata Cristiano</span>
+                <span className="pro-brand-name-short">PDC</span>
+              </span>
             </div>
           </a>
 

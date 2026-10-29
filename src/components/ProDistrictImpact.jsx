@@ -1,88 +1,142 @@
 import React, { useState } from 'react';
 import { districtImpacts } from '../data/campaignData';
-import { MapPin, CheckCircle2, ArrowRight, ShieldCheck, Compass } from 'lucide-react';
+import { ArrowRight, X, CheckCircle2 } from 'lucide-react';
 
 export default function ProDistrictImpact() {
-  const [activeDistrictId, setActiveDistrictId] = useState('conchagua');
-
-  const currentDistrict = districtImpacts.find((d) => d.id === activeDistrictId) || districtImpacts[0];
+  const [activeDistrict, setActiveDistrict] = useState(null);
 
   return (
-    <section className="pro-section pro-district-section" id="distritos">
-      <div className="pro-container">
-        <div className="pro-section-header">
-          <span className="pro-eyebrow">
-            <span className="pro-eyebrow-pill">
-              <Compass size={14} style={{ display: 'inline', marginRight: '5px' }} />
-              Territorio y Comunidades
-            </span>
-          </span>
-          <h2 className="pro-title">Impacto Directo por Distritos de La Unión</h2>
-          <p className="pro-subtitle">
-            Compromisos legislativos y municipales específicos diseñados para atender las realidades de cada zona del departamento.
+    <section className="vance-principles-section" id="distritos">
+      <div className="vance-principles-container">
+        
+        {/* Centered Editorial Header (Matching 'The Vance Principles') */}
+        <div className="vance-principles-header">
+          <h2 className="vance-principles-title">
+            Impacto <br />
+            <em>Territorial</em>
+          </h2>
+
+          <p className="vance-principles-sub">
+            Compromisos prioritarios y acciones estratégicas para impulsar el desarrollo, la economía y el bienestar de los 4 distritos de La Unión.
           </p>
         </div>
 
-        {/* District Selector Tabs */}
-        <div className="pro-district-tabs-bar">
-          {districtImpacts.map((district) => {
-            const isActive = district.id === activeDistrictId;
+        {/* 4 White Square Cards in a 4-Column Row (Matching Image 2) */}
+        <div className="vance-principles-grid">
+          {districtImpacts.map((district, index) => {
+            const num = index + 1;
             return (
-              <button
+              <div
                 key={district.id}
-                onClick={() => setActiveDistrictId(district.id)}
-                className={`pro-district-tab-btn ${isActive ? 'active' : ''}`}
+                className="vance-principle-card"
+                onClick={() => setActiveDistrict(district)}
+                role="button"
+                tabIndex={0}
+                aria-label={`Ver propuestas para ${district.name}`}
               >
-                <MapPin size={16} />
-                <span>{district.name}</span>
-                {isActive && <span className="pro-district-active-pip"></span>}
-              </button>
+                {/* Hand-sketched circled number matching reference */}
+                <div className="vance-card-num-box">
+                  <svg className="vance-circle-svg" viewBox="0 0 54 54" fill="none">
+                    <ellipse
+                      cx="27"
+                      cy="27"
+                      rx="23"
+                      ry="23.5"
+                      stroke="#007a3d"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      transform="rotate(-5 27 27)"
+                    />
+                    <ellipse
+                      cx="27.5"
+                      cy="26.8"
+                      rx="21"
+                      ry="21.5"
+                      stroke="#007a3d"
+                      strokeWidth="1.2"
+                      opacity="0.65"
+                      strokeLinecap="round"
+                      transform="rotate(8 27.5 26.8)"
+                    />
+                    <text
+                      x="27"
+                      y="35"
+                      textAnchor="middle"
+                      fontSize="22"
+                      fontFamily="'Playfair Display', Georgia, serif"
+                      fontWeight="600"
+                      fill="#007a3d"
+                    >
+                      {num}
+                    </text>
+                  </svg>
+                </div>
+
+                {/* Middle Breathing Space with Subtle Category */}
+                <div className="vance-card-middle">
+                  <span className="vance-card-badge">{district.badge}</span>
+                </div>
+
+                {/* Bottom Title matching Image 2 */}
+                <div className="vance-card-bottom">
+                  <h3 className="vance-card-title">
+                    {district.id === 'la-union-cabecera' ? 'LA UNIÓN CABECERA' : district.name.toUpperCase()}
+                  </h3>
+                  <span className="vance-card-cta">
+                    Ver {district.projects.length} Proyectos <ArrowRight size={14} className="vance-card-arrow" />
+                  </span>
+                </div>
+              </div>
             );
           })}
         </div>
 
-        {/* District Content Card */}
-        <div className="pro-district-card">
-          <div className="pro-district-card-header">
-            <div>
-              <span className="pro-district-badge">{currentDistrict.badge}</span>
-              <h3 className="pro-district-title">{currentDistrict.name}</h3>
-              <p className="pro-district-lead">
-                Iniciativas prioritarias respaldadas en el Broshure Legislativo de Willian Méndez y el Plan Municipal de Luis Ortiz:
-              </p>
-            </div>
-            <div className="pro-district-seal">
-              <span style={{ fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.12em', color: 'var(--pdc-green)' }}>
-                DEPARTAMENTO DE LA UNIÓN
+      </div>
+
+      {/* District Detail Modal */}
+      {activeDistrict && (
+        <div className="vance-modal-backdrop" onClick={() => setActiveDistrict(null)}>
+          <div className="vance-modal-dialog" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="vance-modal-close"
+              onClick={() => setActiveDistrict(null)}
+              aria-label="Cerrar modal"
+            >
+              <X size={20} />
+            </button>
+
+            <div className="vance-modal-header">
+              <span className="vance-modal-eyebrow">
+                Compromiso Territorial • PDC La Unión
               </span>
-              <strong style={{ display: 'block', fontSize: '1rem', color: 'var(--slate-900)' }}>
-                ELECCIONES 2027
-              </strong>
+              <h3 className="vance-modal-title">{activeDistrict.name}</h3>
+              <p className="vance-modal-badge">{activeDistrict.badge}</p>
             </div>
-          </div>
 
-          <div className="pro-district-grid">
-            {currentDistrict.projects.map((project, idx) => (
-              <div key={idx} className="pro-district-item">
-                <div className="pro-district-icon-wrap">
-                  <CheckCircle2 size={18} color="var(--pdc-green)" />
-                </div>
-                <div className="pro-district-item-content">
-                  <span className="pro-district-item-num">Prioridad 0{idx + 1}</span>
-                  <p>{project}</p>
-                </div>
+            <div className="vance-modal-body">
+              <h4 className="vance-modal-subtitle">
+                Proyectos y Acciones Concretas:
+              </h4>
+
+              <div className="vance-modal-list">
+                {activeDistrict.projects.map((proj, pIdx) => (
+                  <div key={pIdx} className="vance-modal-item">
+                    <span className="vance-modal-num">0{pIdx + 1}</span>
+                    <p className="vance-modal-text">{proj}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="pro-district-card-footer">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--slate-600)', fontSize: '0.88rem' }}>
-              <ShieldCheck size={16} color="var(--pdc-green)" />
-              <span>Articulación permanente con líderes comunitarios y municipalidades de La Unión Sur y Norte.</span>
+            <div className="vance-modal-footer">
+              <div className="vance-modal-tagline">
+                <CheckCircle2 size={18} className="vance-modal-check" />
+                <span>Iniciativas diseñadas para generar impacto real e inmediato en las familias del distrito.</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
