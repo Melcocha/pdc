@@ -1,44 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import { campaignData } from '../data/campaignData';
+import { goTo, scrollToId } from '../hooks/useHashRoute';
 import { Menu, X, Phone, CheckCircle2, ChevronRight } from 'lucide-react';
 
-export default function ProNavbar() {
+const navLinks = [
+  { label: 'Inicio', route: '/' },
+  { label: 'Plataforma Municipal', route: '/municipal' },
+  { label: 'Plataforma Legislativa', route: '/legislativa' },
+  { label: 'Redes', scroll: 'redes' },
+];
+
+const topbarCenter = {
+  '/': 'DEPARTAMENTO DE LA UNIÓN • ALCALDÍA Y ASAMBLEA LEGISLATIVA',
+  '/municipal': 'LA UNIÓN SUR • PLAN DE TRABAJO MUNICIPAL',
+  '/legislativa': 'DEPARTAMENTO DE LA UNIÓN • ASAMBLEA LEGISLATIVA',
+};
+
+export default function ProNavbar({ route = '/' }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScrollEvent = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    const handleScrollEvent = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', handleScrollEvent);
     return () => window.removeEventListener('scroll', handleScrollEvent);
   }, []);
 
-  const navLinks = [
-    { label: 'Inicio', href: '#inicio' },
-    { label: 'Candidatos', href: '#candidatos' },
-    { label: '12 Propuestas', href: '#propuestas' },
-    { label: 'Plan Municipal', href: '#plan-municipal' },
-    { label: 'Distritos', href: '#distritos' },
-  ];
-
-  const handleScroll = (href) => {
+  const go = (item) => {
     setMobileMenuOpen(false);
-    const target = document.querySelector(href);
-    if (target) {
-      const topOffset = 85;
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - topOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+    if (item.scroll) {
+      scrollToId(item.scroll);
+    } else if (item.route === route) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      goTo(item.route);
     }
   };
+
+  const goBallot = () => {
+    setMobileMenuOpen(false);
+    if (route === '/legislativa') {
+      scrollToId('candidatos');
+    } else {
+      goTo('/legislativa');
+    }
+  };
+
+  const isActive = (item) => item.route === route;
 
   return (
     <>
@@ -50,7 +58,7 @@ export default function ProNavbar() {
             <span>{campaignData.coalition} • {campaignData.electionYear}</span>
           </div>
           <div className="pro-topbar-center hide-on-mobile">
-            <span>DEPARTAMENTO DE LA UNIÓN • ASAMBLEA LEGISLATIVA</span>
+            <span>{topbarCenter[route]}</span>
           </div>
           <div className="pro-topbar-item">
             <Phone size={13} style={{ color: 'var(--pdc-green)' }} />
@@ -66,11 +74,11 @@ export default function ProNavbar() {
         <div className="pro-container pro-nav-wrap">
           {/* Brand Lockup */}
           <a
-            href="#inicio"
+            href="#/"
             className="pro-brand"
             onClick={(e) => {
               e.preventDefault();
-              handleScroll('#inicio');
+              go({ route: '/' });
             }}
           >
             <div className="pro-brand-logo-frame">
@@ -94,12 +102,13 @@ export default function ProNavbar() {
               {navLinks.map((item) => (
                 <li key={item.label} className="pro-menu-item">
                   <a
-                    href={item.href}
+                    href={item.route ? `#${item.route}` : `#${item.scroll}`}
                     onClick={(e) => {
                       e.preventDefault();
-                      handleScroll(item.href);
+                      go(item);
                     }}
-                    className={item.highlight ? 'pro-menu-highlight' : ''}
+                    className={isActive(item) ? 'pro-menu-active' : ''}
+                    aria-current={isActive(item) ? 'page' : undefined}
                   >
                     {item.label}
                   </a>
@@ -111,10 +120,10 @@ export default function ProNavbar() {
           {/* Action Group */}
           <div className="pro-nav-action">
             <a
-              href="#candidatos"
+              href="#/legislativa"
               onClick={(e) => {
                 e.preventDefault();
-                handleScroll('#candidatos');
+                goBallot();
               }}
               className="pro-ballot-pill"
               title="Candidato Willian Méndez - Casilla 1"
@@ -142,10 +151,10 @@ export default function ProNavbar() {
               {navLinks.map((item) => (
                 <a
                   key={item.label}
-                  href={item.href}
+                  href={item.route ? `#${item.route}` : `#${item.scroll}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    handleScroll(item.href);
+                    go(item);
                   }}
                   className="pro-mobile-link"
                 >
@@ -156,10 +165,10 @@ export default function ProNavbar() {
 
               <div className="pro-mobile-actions">
                 <a
-                  href="#candidatos"
+                  href="#/legislativa"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleScroll('#candidatos');
+                    goBallot();
                   }}
                   className="btn-pro btn-pro-green btn-pro-full"
                 >

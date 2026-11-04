@@ -1,21 +1,9 @@
 import React from 'react';
 import { campaignData } from '../data/campaignData';
+import { goTo, scrollToId } from '../hooks/useHashRoute';
 import { Phone } from 'lucide-react';
 
 export default function ProFooter() {
-  const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const topOffset = 85;
-      const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - topOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <footer className="pro-footer">
       <div className="pro-footer-fullwidth">
@@ -45,28 +33,23 @@ export default function ProFooter() {
             <h5 className="pro-footer-heading">Secciones</h5>
             <ul className="pro-footer-links">
               <li>
-                <a href="#inicio" onClick={(e) => { e.preventDefault(); handleScroll('inicio'); }}>
+                <a href="#/" onClick={(e) => { e.preventDefault(); goTo('/'); }}>
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="#candidatos" onClick={(e) => { e.preventDefault(); handleScroll('candidatos'); }}>
-                  Fórmula a Diputados
+                <a href="#/municipal" onClick={(e) => { e.preventDefault(); goTo('/municipal'); }}>
+                  Plataforma Municipal · Luis Ortiz
                 </a>
               </li>
               <li>
-                <a href="#propuestas" onClick={(e) => { e.preventDefault(); handleScroll('propuestas'); }}>
-                  12 Propuestas de Ley
+                <a href="#/legislativa" onClick={(e) => { e.preventDefault(); goTo('/legislativa'); }}>
+                  Plataforma Legislativa · Willian Méndez
                 </a>
               </li>
               <li>
-                <a href="#plan-municipal" onClick={(e) => { e.preventDefault(); handleScroll('plan-municipal'); }}>
-                  Plan Municipal (9 Ejes)
-                </a>
-              </li>
-              <li>
-                <a href="#distritos" onClick={(e) => { e.preventDefault(); handleScroll('distritos'); }}>
-                  Impacto Territorial
+                <a href="#redes" onClick={(e) => { e.preventDefault(); scrollToId('redes'); }}>
+                  Redes y código QR
                 </a>
               </li>
             </ul>

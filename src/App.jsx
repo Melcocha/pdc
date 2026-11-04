@@ -7,35 +7,74 @@ import ProRadialMunicipalPlan from './components/ProRadialMunicipalPlan';
 import ProDistrictImpact from './components/ProDistrictImpact';
 import ProQuoteBanner from './components/ProQuoteBanner';
 import ProFooter from './components/ProFooter';
+import HomeWelcome from './components/HomeWelcome';
+import PlatformChooser from './components/PlatformChooser';
+import SocialHub from './components/SocialHub';
+import LegislativeVideos from './components/LegislativeVideos';
+import MunicipalHero from './components/MunicipalHero';
+import MeetLuis from './components/MeetLuis';
+import { useHashRoute } from './hooks/useHashRoute';
 import './App.css';
+import './pages.css';
+
+// Inicio: video de bienvenida del alcalde + elección de plataforma + redes
+function HomePage() {
+  return (
+    <>
+      <HomeWelcome />
+      <PlatformChooser />
+    </>
+  );
+}
+
+// Plataforma Municipal (Luis Ortiz, La Unión Sur)
+function MunicipalPage() {
+  return (
+    <>
+      <MunicipalHero />
+      <MeetLuis />
+      <ProRadialMunicipalPlan />
+    </>
+  );
+}
+
+// Plataforma Legislativa (Willian Méndez + Carmen Torres)
+function LegislativePage() {
+  return (
+    <>
+      <ProHero />
+      <LegislativeVideos />
+      <ProCandidates />
+      <ProBlueprintProposals />
+      <ProDistrictImpact />
+    </>
+  );
+}
+
+const pages = {
+  '/': HomePage,
+  '/municipal': MunicipalPage,
+  '/legislativa': LegislativePage,
+};
 
 export default function App() {
+  const route = useHashRoute();
+  const Page = pages[route];
+
   return (
     <div className="pro-app">
-      {/* 1. Sleek Top Bar & Sticky Modern Navbar */}
-      <ProNavbar />
+      <ProNavbar route={route} />
 
-      <main>
-        {/* 2. Editorial Magazine Hero Section */}
-        <ProHero />
+      <main key={route} className="page-enter">
+        <Page />
 
-        {/* 3. Fórmula Electoral: Willian Méndez (Casilla 1) & Carmen Torres (Suplente) */}
-        <ProCandidates />
+        {/* Redes activas + código QR (al final de cada página) */}
+        <SocialHub />
 
-        {/* 4. 12 Legislative Initiatives (Filterable & Searchable) */}
-        <ProBlueprintProposals />
-
-        {/* 5. 9-Axes Municipal Plan Wheel (Luis Ortiz - Economía Familiar) */}
-        <ProRadialMunicipalPlan />
-
-        {/* 6. Territorial Impact by Districts of La Unión */}
-        <ProDistrictImpact />
-
-        {/* 7. Authentic Core Message & Slogan Banner */}
+        {/* Mensaje central y lema */}
         <ProQuoteBanner />
       </main>
 
-      {/* 8. Pro Minimalist Footer */}
       <ProFooter />
     </div>
   );
