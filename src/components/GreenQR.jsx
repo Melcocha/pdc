@@ -5,13 +5,15 @@ import { Download } from 'lucide-react';
 const CELL = 10;
 const QUIET = 2;
 
-// Silueta del pescadito (símbolo del PDC) dibujada en una caja de 100 x 60.
+// Pescadito del logo oficial del PDC (contorno blanco, sin las letras) en una caja de 100 x 60.
 function FishSilhouette({ x, y, scale }) {
   return (
     <g transform={`translate(${x} ${y}) scale(${scale})`}>
-      <path d="M2 30 C22 2, 62 2, 80 30 C62 58, 22 58, 2 30 Z" fill="#00562b" />
-      <path d="M76 30 L100 8 L100 52 Z" fill="#00562b" />
-      <circle cx="22" cy="25" r="4.2" fill="#ffffff" />
+      <g fill="none" stroke="#ffffff" strokeWidth="5.5" strokeLinejoin="round">
+        <path d="M3 30 C22 3, 62 5, 80 30 L99 53" />
+        <path d="M3 30 C22 57, 62 55, 80 30 L99 7" />
+      </g>
+      <circle cx="21" cy="27" r="4.4" fill="#ffffff" />
     </g>
   );
 }
@@ -49,7 +51,7 @@ export default function GreenQR({ value, size = 240 }) {
   ];
   const center = total / 2;
   const badgeR = n * 0.135 * CELL + CELL * 0.4;
-  const fishScale = (badgeR * 1.45) / 100;
+  const fishScale = (badgeR * 1.55) / 100;
 
   const download = () => {
     const svg = svgRef.current;
@@ -124,7 +126,7 @@ export default function GreenQR({ value, size = 240 }) {
         ))}
 
         <circle cx={center} cy={center} r={badgeR} fill="#ffffff" />
-        <circle cx={center} cy={center} r={badgeR - 2} fill="none" stroke="#007a3d" strokeWidth={2.4} />
+        <circle cx={center} cy={center} r={badgeR - 3} fill="#00562b" />
         <FishSilhouette x={center - 50 * fishScale} y={center - 30 * fishScale} scale={fishScale} />
       </svg>
 
